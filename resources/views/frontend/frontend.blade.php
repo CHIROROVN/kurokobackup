@@ -1,5 +1,5 @@
-@include('frontend.element.header')
-	<!-- content -->
+@include('frontend.elements.header')
+    <!-- content -->
       @yield('content')
     <!-- end content -->
-@include('frontend.element.footer')
+@include('frontend.elements.footer')
