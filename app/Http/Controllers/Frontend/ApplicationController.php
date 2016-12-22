@@ -6,7 +6,7 @@ use Session;
 use Validator;
 
 
-class ContactController extends FrontendController
+class ApplicationController extends FrontendController
 {
     public function __construct()
     {
@@ -15,16 +15,16 @@ class ContactController extends FrontendController
 
     /*
     |-----------------------------------
-    | get input contact
+    | get input application
     |-----------------------------------
     */
     public function getInput() {
-        return view('frontend.contact.input');
+        return view('frontend.application.input');
     }
 
     /*
     |-----------------------------------
-    | post input contact
+    | post input application
     |-----------------------------------
     */
     public function postInput() {
@@ -33,19 +33,19 @@ class ContactController extends FrontendController
 
     /*
     |-----------------------------------
-    | get confirm contact
+    | get confirm application
     |-----------------------------------
     */
     public function getConfirm() {
-        return view('frontend.contact.confirm');
+        return view('frontend.application.confirm');
     }
 
     /*
     |-----------------------------------
-    | get complete contact
+    | get complete application
     |-----------------------------------
     */
     public function getComplete() {
-        return view('frontend.contact.complete');
+        return view('frontend.application.complete');
     }
 }

@@ -25,6 +25,8 @@
   width:600px;
   margin-right:60px;
   margin-top:55px;
+  font-size:18px;
+  line-height:1.8;
 }
 
 #index .content .box2 .fl-right {
@@ -43,4 +45,215 @@
 #index .content .box03 {
   margin-top:60px;
   margin-bottom:45px;
+}
+
+/*------------------------------------------------------------------------------------------------
+  page
+--------------------------------------------------------------------------------------------------*/
+.page .content h1 {
+  padding:25px 0 45px 0;
+}
+
+.page .message {
+  color:#FF2626;
+}
+
+.page .table {
+  width:100%;
+  margin:10px 0 35px 0;
+}
+
+.page .table td {
+  font-size:18px;
+  color:#333;
+  padding:15px 25px 10px 0;
+  border-top:1px solid #7F7F7F;
+  border-right:1px solid #7F7F7F;
+}
+
+.page .table td:last-child {
+  border-bottom:1px solid #7F7F7F;
+}
+
+.bg-submit {
+  text-align:center;
+  margin-top:35px;
+  margin-bottom:70px;
+}
+
+.bt-submit {
+  width:203px;
+  height:66px;
+  text-align:center;
+  font-size:22px;
+  background:url(../image/bt-submit.gif) no-repeat;
+  border:none;
+  color:#fff;
+}
+
+.page .table td .checkbox {
+  margin-left:25px;
+  margin-top:5px;
+}
+
+.page .table td .row {
+  padding-top:15px;
+}
+
+.page .table td .text-date {
+  padding-left:15px;
+  line-height:40px;
+  float:left;
+}
+
+.page .table .title {
+  width:164px;
+  padding-left:5px;
+  padding-right:5px;
+  background:#9393AC;
+  font-size:18px;
+  text-align:center;
+  vertical-align:middle;
+  color:#fff;
+}
+
+.page .table-confirm td:last-child {
+  padding-left:25px;
+}
+
+.page .table .font-red {
+  font-size:23px;
+  color:#FF2626;
+}
+
+.page .text-center {
+  text-align:center;
+}
+
+input[type=text],select,textarea {
+  height:40px;
+  border:1px solid #7B7B7B;
+  background:#EFEFEF;
+  padding:0px 5px 0px 20px;
+  font-size:18px;
+  color:#353535;
+  margin-left:25px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: -2px 3px 0 0px;
+  width: 19px !important;
+  height: 19px;
+  background: url(../image/img-checkbox.png) left top no-repeat;
+}
+
+input[type="checkbox"]:checked + label {
+  background: url(../image/img-checkbox-checked.png) left top no-repeat;
+}
+
+option {
+  font-size:18px;
+  color:#353535;
+}
+
+textarea {
+  width:455px;
+  height:182px;
+}
+
+.input-lg {
+  width:600px;
+}
+
+.input-md {
+  width:425px;
+}
+
+.input-sm {
+  width:300px;
+}
+
+.input-sm-er {
+  width:280px;
+}
+
+.input-xs {
+  width:156px;
+}
+
+.input-year {
+  width:140px;
+}
+
+.input-date {
+  width:74px;
+}
+
+.bg-select {
+  overflow: hidden;
+  height: 40px;
+  float: left;
+  margin-left: 25px;
+}
+
+.bg-select-sm-er {
+  width: 280px;
+  background: url(../image/cb-icon.gif) no-repeat scroll 250px 0px #EFEFEF;
+}
+
+.bg-select-sm {
+  width: 300px;
+  background: url(../image/cb-icon.gif) no-repeat scroll 270px 0px #EFEFEF;
+}
+
+.bg-select-md {
+  width: 425px;
+  background: url(../image/cb-icon.gif) no-repeat scroll 395px 0px #EFEFEF;
+}
+
+.bg-select-year {
+  width: 140px;
+  background: url(../image/cb-icon.gif) no-repeat scroll 110px 0px #EFEFEF;
+}
+
+.bg-select-date {
+  width: 74px;
+  background: url(../image/cb-icon.gif) no-repeat scroll 44px 0px #EFEFEF;
+}
+
+.bg-select select {
+  margin-left:0;
+  background:transparent;
+}
+
+.bg-select .input-sm-er {
+  width:297px;
+}
+
+.bg-select .input-sm {
+  width:317px;
+}
+
+.bg-select .input-md {
+  width:442px;
+}
+
+.bg-select .input-year {
+  width:157px;
+}
+
+.bg-select .input-date {
+  width:91px;
+  padding-left:10px;
+}
+
+.font-orange {
+  color:#FF9226;
 }
