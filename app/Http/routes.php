@@ -34,5 +34,12 @@ Route::group(['prefix' => '', 'namespace' => 'Frontend'], function () {
     Route::get('/contact/confirm', ['as' => 'frontend.contact.confirm', 'uses' => 'ContactController@getConfirm']);
     Route::get('/contact/complete', ['as' => 'frontend.contact.complete', 'uses' => 'ContactController@getComplete']);
 
+    /*
+    |--------------------------------------------------------------------------
+    | Price Routes
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/price', ['as' => 'frontend.price.index', 'uses' => 'PriceController@index']);
+
 
 });

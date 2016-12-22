@@ -23,7 +23,7 @@
       <nav class="fl-right"> 
         <ul>
           <li id="nav01"><a href="function.html" title="機能紹介">機能紹介</a></li>
-          <li id="nav02"><a href="price.html" title="価格">価格</a></li>
+          <li id="nav02"><a href="{{route('frontend.price.index')}}" title="価格">価格</a></li>
           <li id="nav03"><a href="question.html" title="よくある質問">よくある質問</a></li>
           <li id="nav04"><a href="{{route('frontend.application.input')}}" title="お申し込み">お申し込み</a></li>
           <li id="nav05"><a href="{{route('frontend.contact.input')}}" title="お問い合わせ">お問い合わせ</a></li>

@@ -130,6 +130,12 @@
   text-align:center;
 }
 
+.page .text-price {
+  font-size:12px;
+  line-height:1.25;
+  margin:30px 0 115px 0;
+}
+
 input[type=text],select,textarea {
   height:40px;
   border:1px solid #7B7B7B;
@@ -256,4 +262,73 @@ textarea {
 
 .font-orange {
   color:#FF9226;
+}
+
+/*------------------------------------------------------------------------------------------------
+  price
+--------------------------------------------------------------------------------------------------*/
+
+.table-price tr:first-child {
+  height:59px;
+  background:#5C5C78;
+}
+
+.table-price tr:first-child td {
+  color:#fff;
+  text-align:center;
+}
+
+.table-price tr:nth-child(2) td {
+  height:50px;
+}
+
+.table-price tr td {
+  height:55px;
+  border-top:1px solid #7F7F7F;
+  border-left:1px solid #7F7F7F;
+  font-size:15px ;
+  color:#353535;
+  vertical-align:middle;
+  text-align:right;
+  font-weight:bold;
+}
+
+.table-price tr:last-child td {
+  border-bottom:1px solid #7F7F7F;
+}
+
+.table-price tr td:last-child {
+  border-right:1px solid #7F7F7F;
+}
+
+.table-price td.title {
+  text-align:center;
+  font-size:15px;
+  color:#fff;
+  background:#9393AC;
+  padding-right:0;
+}
+
+.table-price-big td {
+  width:111px;
+  padding-right:7px;
+}
+
+.table-price-small td {
+  width:166px;
+  padding-right:20px;
+}
+
+.table-price-big h2 {
+  font-size:24px;
+  font-weight:bold;
+}
+
+.table-price-small h2 {
+  font-size:20px;
+  font-weight:bold;
+}
+
+.table-price-small {
+  margin-top:45px;
 }
