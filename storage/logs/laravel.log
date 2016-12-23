@@ -396,3 +396,6 @@ Stack trace:
 #22 D:\xampp\htdocs\kurokobackup\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #23 D:\xampp\htdocs\kurokobackup\index.php(55): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #24 {main}  
+[2016-12-23 13:49:16] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Frontend\Mail' not found' in D:\xampp\htdocs\kurokobackup\app\Http\Controllers\Frontend\ContactController.php:76
+Stack trace:
+#0 {main}  

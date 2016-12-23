@@ -332,3 +332,9 @@ textarea {
 .table-price-small {
   margin-top:45px;
 }
+
+
+/*error validation input*/
+.validation-input {
+  padding-left: 22px;
+}

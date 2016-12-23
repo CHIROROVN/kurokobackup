@@ -242,18 +242,17 @@ return [
     | contact
     |--------------------------------------------------------------------------
     */
-    "error_contact_name_required"                            => "お名前を入力してください。",
-    "error_contact_name_kana_regex"                          => "お名前（フリガナフォーマットひらがなを入力してください。",
-    "error_contact_company_required"                         => "会社名を入力してください。",
-    "error_contact_zipcode_required"                         => "郵便番号を入力してください。",
-    "error_contact_address_required"                         => "ご住所を入力してください。",
-    "error_contact_phone_required"                           => "電話番号を入力してください。",
-    "error_contact_phone_numeric"                            => "電話番号を入力してください。",
-    "error_contact_email_required"                           => "メールアドレスを入力してください。",
-    "error_contact_email_email"                              => "メールアドレスを入力してください。",
-    "error_contact_type_message_required"                    => "お問い合わせの種類を選択してください。",
-    "error_contact_content_required"                         => "お問い合わせ内容を入力してください。",
-    "error_contact_agree_required"                           => "同意するを選択してください。",
+    "error_name_kana_required"                                  => "ふりがなを入力してください。",
+    "error_name_kana_regex"                                     => "ふりがな不正な形式の",
+    "error_name_required"                                       => "お名前を入力してください。",
+    "error_company_name_required"                               => "株式会社チロロネットを入力してください。",
+    "error_department_name_required"                            => "株式会社チロロネットを入力してください。",
+    "error_zipcode_required"                                    => "ご住所を入力してください。",
+    "error_address_required"                                    => "住所を入力してください。",
+    "error_tel_required"                                        => "連絡先TELを入力してください。",
+    "error_email_required"                                      => "メールアドレスを入力してください。",
+    "error_email_email"                                         => "メールアドレス不正な形式の",
+    "error_content_required"                                    => "お問い合わせ内容を入力してください。",
 
 
 ];

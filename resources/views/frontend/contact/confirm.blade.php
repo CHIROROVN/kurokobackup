@@ -13,62 +13,63 @@
           <tr>
             <td class="title">お名前</td>
             <td>
-              ふりがな<br />
-              お名前
+              {{ $contact['name_kana'] }}<br />
+              {{ $contact['name'] }}
             </td>
           </tr>
           <tr>
             <td class="title">御社名</td>
             <td>
-              株式会社チロロネット
+              {{ $contact['company_name'] }}
             </td>
           </tr>
           <tr>
             <td class="title">部署名</td>
             <td>
-              株式会社チロロネット
+              {{ $contact['department_name'] }}
             </td>
           </tr>
           <tr>
             <td class="title">ご住所</td>
             <td>
-              〒710-0844<br />
-              岡山県倉敷市福井125-7
+              {{ $contact['zipcode'] }}<br />
+              {{ $contact['address'] }}
             </td>
           </tr>
           <tr>
             <td class="title">連絡先TEL</td>
             <td>
-              086-430-3956
+              {{ $contact['tel'] }}
             </td>
           </tr>
           <tr>
             <td class="title">連絡先FAX</td>
             <td>
-              086-423-3957
+              {{ $contact['fax'] }}
             </td>
           </tr>
           <tr>
             <td class="title">メールアドレス</td>
             <td>
-              support@chiroro.com
+              {{ $contact['email'] }}
             </td>
           </tr>
           <tr>
             <td class="title">お問い合わせ内容</td>
             <td>
-              test
+              {!! nl2br($contact['content']) !!}
             </td>
           </tr>
           
         </table>
         <div class="bg-submit">
-          <input type="submit" value="送信" class="bt-submit" name=""/>
-          <input type="submit" value="送信2" class="bt-submit" name=""/>
+          <input type="submit" value="送信" class="bt-submit" name="back" onClick="location.href='{{ route('frontend.contact.input') }}'"/>
+          <input type="submit" value="送信2" class="bt-submit" name="send" onClick="location.href='{{ route('frontend.contact.complete') }}'"/>
         </div>
       </div>
     </div>
   </section>
   <!-- End content -->
 <!-- End content -->
+
 @endsection
