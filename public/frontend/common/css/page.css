@@ -333,8 +333,119 @@ textarea {
   margin-top:45px;
 }
 
-
 /*error validation input*/
 .validation-input {
   padding-left: 22px;
+}
+
+span.error-input {
+  margin-left: 25px;
+  font-weight: 12px;
+  color: #ff2626;
+}
+
+.strat_date option{
+  text-align: center;
+}
+
+/*------------------------------------------------------------------------------------------------
+  question
+--------------------------------------------------------------------------------------------------*/
+
+.box-ques {
+  width:100%;
+  margin-top:60px;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.box-ques:first-of-type {
+  margin-top:15px;
+}
+
+.box-ques:last-child {
+  margin-bottom:80px;
+}
+
+.box-ques .row-ques {
+  margin-bottom:13px;
+  padding:0 5px;
+}
+
+.box-ques .row-ans {
+  width:100%;
+  padding:10px 5px;
+  background:#CFCFDA;
+}
+
+.box-ques img {
+  width:36px;
+  margin-right:10px;
+}
+
+.text-ans {
+  width:930px;
+  padding-top:7px;
+  padding-bottom:7px;
+}
+
+.row-ques {
+  line-height:37px;
+}
+
+/*------------------------------------------------------------------------------------------------
+  function
+--------------------------------------------------------------------------------------------------*/
+.frame-func {
+  font-size:18px;
+  color:#333;
+  margin-bottom:95px;
+}
+
+.frame-func h2 {
+  padding-bottom:45px;
+}
+
+.frame-func01 {
+  text-align:center;
+}
+
+.frame-func02 li {
+  width:500px;
+  float:left;
+  border-left:1px solid #C0C0C0;
+  border-top:1px solid #C0C0C0;
+  position:relative;
+}
+
+.frame-func02 li h3 {
+  position:absolute;
+  top:25px;
+  left:0;
+  right:0;
+  text-align:center;
+  font-size:24px;
+}
+
+.frame-func02 li .text {
+  padding:70px 30px 30px 30px;
+}
+
+.frame-func02 li img {
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.frame-func02 li:nth-child(2n+0) {
+  border-right:1px solid #C0C0C0;
+}
+
+.frame-func02 li:nth-last-child(2),
+.frame-func02 li:last-child {
+  border-bottom:1px solid #C0C0C0;
+}
+
+.frame-func03 .text {
+  width:573px;
+  margin-right:15px;
 }

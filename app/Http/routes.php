@@ -41,5 +41,12 @@ Route::group(['prefix' => '', 'namespace' => 'Frontend'], function () {
     */
     Route::get('/price', ['as' => 'frontend.price.index', 'uses' => 'PriceController@index']);
 
+    /*
+    |--------------------------------------------------------------------------
+    | Price Routes
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/function', ['as' => 'frontend.function.index', 'uses' => 'FunctionController@index']);
+
 
 });
