@@ -9,9 +9,9 @@
     <div class="content">
       <div class="container">
         <h1><img src="{{ asset('') }}public/frontend/common/image/title-contact.png" /></h1>
-        <p class="text-center">Message</p>
+        <p class="text-center">The content inquiry has been sent successfully.</p>
         <div class="bg-submit">
-          <input type="submit" value="送信" class="bt-submit" name=""/>
+          <input type="button" value="送信" class="bt-submit" onclick="location.href='{{route('frontend.contact.input')}}'" name="btnBackHome"/>
         </div>
       </div>
     </div>

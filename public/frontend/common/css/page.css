@@ -335,11 +335,11 @@ textarea {
 
 /*error validation input*/
 .validation-input {
-  padding-left: 22px;
+  padding-left: 26px;
 }
 
 span.error-input {
-  margin-left: 25px;
+  margin-left: 26px;
   font-weight: 12px;
   color: #ff2626;
 }
@@ -448,5 +448,9 @@ span.error-input {
 .frame-func03 .text {
   width:573px;
   margin-right:15px;
+}
+
+td.td-mail{
+  width: 50px;
 }
 

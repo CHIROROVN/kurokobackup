@@ -23,9 +23,7 @@
                 @endif
               </div>
               @if ($errors->first('name_kana'))
-              <div class="row">
                 <p class="message validation-input">{!! $errors->first('name_kana') !!}</p>
-              </div>
               @endif
               <div class="row">
                 @if ( isset($contact) )
@@ -35,9 +33,7 @@
                 @endif
               </div>
               @if ($errors->first('name'))
-              <div class="row">
                 <p class="message validation-input">{!! $errors->first('name') !!}</p>
-              </div>
               @endif
             </td>
           </tr>
@@ -50,9 +46,7 @@
               <input class="input-lg" type="text" name="company_name" value="{{ old('company_name') }}" placeholder="株式会社チロロネット"/>
               @endif
               @if ($errors->first('company_name'))
-              <div class="row">
                 <p class="message validation-input">{!! $errors->first('company_name') !!}</p>
-              </div>
               @endif
             </td>
           </tr>
@@ -65,9 +59,7 @@
               <input class="input-lg" type="text" name="department_name" value="{{ old('department_name') }}" placeholder="株式会社チロロネット"/>
               @endif
               @if ($errors->first('department_name'))
-              <div class="row">
                 <p class="message validation-input">{!! $errors->first('department_name') !!}</p>
-              </div>
               @endif
             </td>
           </tr>
@@ -82,9 +74,7 @@
                 @endif
               </div>
               @if ($errors->first('zipcode'))
-              <div class="row">
                 <p class="message validation-input">{!! $errors->first('zipcode') !!}</p>
-              </div>
               @endif
               <div class="row">
                 @if ( isset($contact) )
@@ -94,9 +84,7 @@
                 @endif
               </div>
               @if ($errors->first('address'))
-              <div class="row">
                 <p class="message validation-input">{!! $errors->first('address') !!}</p>
-              </div>
               @endif
             </td>
           </tr>
@@ -109,9 +97,7 @@
               <input class="input-sm" type="text" name="tel" value="{{ old('tel') }}"  placeholder="086-430-3956"/>
               @endif
               @if ($errors->first('tel'))
-              <div class="row">
                 <p class="message validation-input">{!! $errors->first('tel') !!}</p>
-              </div>
               @endif
             </td>
           </tr>
@@ -122,6 +108,9 @@
               <input class="input-sm" type="text" name="fax" value="{{ $contact['fax'] }}" placeholder="086-423-3957"/>
               @else
               <input class="input-sm" type="text" name="fax" value="{{ old('fax') }}" placeholder="086-423-3957"/>
+              @endif
+              @if ($errors->first('fax'))
+                <p class="message validation-input">{!! $errors->first('fax') !!}</p>
               @endif
             </td>
           </tr>
@@ -134,9 +123,7 @@
               <input class="input-sm" type="text" name="email" value="{{ old('email') }}" placeholder="support@chiroro.com"/>
               @endif
               @if ($errors->first('email'))
-              <div class="row">
                 <p class="message validation-input">{!! $errors->first('email') !!}</p>
-              </div>
               @endif
             </td>
           </tr>
@@ -149,9 +136,7 @@
               <textarea name="content" >{!! old('content') !!}</textarea>
               @endif
               @if ($errors->first('content'))
-              <div class="row">
                 <p class="message validation-input">{!! $errors->first('content') !!}</p>
-              </div>
               @endif
             </td>
           </tr>

@@ -9,9 +9,9 @@
     <div class="content">
       <div class="container">
         <h1><img src="{{ asset('') }}public/frontend/common/image/title-application.png" /></h1>
-        <p class="text-center">Message</p>
+        <p class="text-center">The content application sent successfully.</p>
         <div class="bg-submit">
-          <input type="submit" value="送信" class="bt-submit" name=""/>
+          <input type="button" value="送信" onclick="location.href='{{route('frontend.application.input')}}'" class="bt-submit" name="btnBackHome"/>
         </div>
       </div>
     </div>

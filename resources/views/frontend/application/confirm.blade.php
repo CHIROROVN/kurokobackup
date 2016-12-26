@@ -9,6 +9,7 @@
     <div class="content">
       <div class="container">
         <h1><img src="{{ asset('') }}public/frontend/common/image/title-application.png" /></h1>
+        <?php $payMethodArr = array('1'=>'月払い', '2'=>'年払い'); $payCreditArr = array('請求書払い（振込手数料はお客様負担）', '2'=>'クレジットカード払い'); ?>
         <table class="table table-confirm">
           <tr>
             <td class="title">ご契約容量</td>
@@ -41,8 +42,8 @@
           <tr>
             <td class="title">お支払い方法</td>
             <td>
-              {{$dataInput->payment_method}}<br />
-              {{$dataInput->payment_credit}}
+              {{@$payMethodArr[$dataInput->payment_method]}}<br />
+              {{@$payCreditArr[$dataInput->payment_credit]}}
             </td>
           </tr>
           <tr>
@@ -98,7 +99,7 @@
           <tr>
             <td class="title">備考</td>
             <td>
-              {{$dataInput->remark}}
+              <?php echo nl2br($dataInput->remark);?>
             </td>
           </tr>
           <tr>
@@ -109,7 +110,7 @@
           </tr>
         </table>
         <div class="bg-submit">
-          <input type="button" value="送信" class="bt-submit" name="btnSend" onclick="location.href='javascript:history.back()'"/>
+          <input type="button" value="送信" class="bt-submit" name="btnSend" onclick="location.href='{{route('frontend.application.sendMail')}}'"/>
           <input type="button" value="戻る" class="bt-submit" onclick="location.href='javascript:history.back()'" name="btnBack"/>
         </div>
       </div>

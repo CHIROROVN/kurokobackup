@@ -9,11 +9,11 @@ return [
 
 		//CONTACT
 		'SUBJECT_CONTACT_USER'    => '【チロロネット】お問合せいただきありがとうございました。',
-		'SUBJECT_CONTACT_MANAGER' => '【くるみサーバー】お問い合わせがありました（自動配信メール）',
+		'SUBJECT_CONTACT_MANAGER' => '【くるみサーバー】お問い合わせがありました（自動配信メール）。',
 
 		//APPLICATION
-		'SUBJECT_APPLICATION_USER'    => '【くるみサーバー】ドメイン新規（属性JPドメイン）お申込みありがとうございます。',
-		'SUBJECT_APPLICATION_MANAGER' => '【くるみサーバー】ドメイン新規（属性JPドメイン）お申込みがありました。',
+		'SUBJECT_APPLICATION_USER'    => '【チロロネット】お申し込みがとうございました。',
+		'SUBJECT_APPLICATION_MANAGER' => '【くるみサーバー】お申し込みがありました（自動配信メール）。',
 
 	),
 ];

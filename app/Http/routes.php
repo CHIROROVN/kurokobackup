@@ -22,6 +22,8 @@ Route::group(['prefix' => '', 'namespace' => 'Frontend'], function () {
     Route::get('/application', ['as' => 'frontend.application.input', 'uses' => 'ApplicationController@getInput']);
     Route::post('/application', ['as' => 'frontend.application.input', 'uses' => 'ApplicationController@postInput']);
     Route::get('/application/confirm', ['as' => 'frontend.application.confirm', 'uses' => 'ApplicationController@getConfirm']);
+    Route::get('/application/send', ['as' => 'frontend.application.sendMail', 'uses' => 'ApplicationController@sendMail']);
+
     Route::get('/application/complete', ['as' => 'frontend.application.complete', 'uses' => 'ApplicationController@getComplete']);
 
     /*

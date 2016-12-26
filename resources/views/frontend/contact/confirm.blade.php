@@ -63,8 +63,8 @@
           
         </table>
         <div class="bg-submit">
-          <input type="submit" value="送信" class="bt-submit" name="back" onClick="location.href='{{ route('frontend.contact.input') }}'"/>
-          <input type="submit" value="送信2" class="bt-submit" name="send" onClick="location.href='{{ route('frontend.contact.complete') }}'"/>
+          <input type="button" value="送信" class="bt-submit" name="send" onClick="location.href='{{ route('frontend.contact.complete') }}'"/>
+          <input type="button" value="戻る" class="bt-submit" name="back" onClick="location.href='{{ route('frontend.contact.input') }}'"/>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ use App\Http\Models\ApplicationModel;
 use Input;
 use Session;
 use Validator;
+use Mail;
 
 
 class ApplicationController extends FrontendController
@@ -20,6 +21,7 @@ class ApplicationController extends FrontendController
     |-----------------------------------
     */
     public function getInput() {
+        if ( Session::has('app_data_session') ) Session::forget('app_data_session');
         $data['yearCurr'] = date('Y');
         $data['yearNext'] = date('Y') + 1;
         $data['yearLast'] = date('Y') + 2;
@@ -105,12 +107,16 @@ class ApplicationController extends FrontendController
         });
 
         // send guest
-        $mailGuest = Mail::send(['html' => 'frontend.email.application.application_sent'], array('application' => $contact), function($message) use ($application){
+        $mailGuest = Mail::send(['html' => 'frontend.email.application.application_sent'], array('application' => $application), function($message) use ($application){
             $message->from(MAIL_FROM_ADDRESS, MAIL_FROM_NAME);
-            $message->to($contact['email'])->subject(SUBJECT_APPLICATION_USER);
+            $message->to($application['email'])->subject(SUBJECT_APPLICATION_USER);
         });
 
-        return redirect()->route('frontend.application.complete');
+        if($mailManager & $mailGuest){
+            return redirect()->route('frontend.application.complete');
+        }else{
+            return redirect()->route('frontend.application.input');
+        }
     }
 
     /*
@@ -119,6 +125,10 @@ class ApplicationController extends FrontendController
     |-----------------------------------
     */
     public function getComplete() {
+        if ( !Session::has('app_data_session') ) {
+            return redirect()->route('frontend.application.input');
+        }
         return view('frontend.application.complete');
+        if ( Session::has('app_data_session') ) Session::forget('app_data_session');
     }
 }
