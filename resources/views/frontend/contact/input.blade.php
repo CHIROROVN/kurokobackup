@@ -140,7 +140,6 @@
               @endif
             </td>
           </tr>
-          
         </table>
         <div class="bg-submit">
           <input type="submit" value="送信" class="bt-submit" name="save"/>
