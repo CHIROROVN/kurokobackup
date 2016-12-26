@@ -11,7 +11,7 @@
         <h1><img src="{{ asset('') }}public/frontend/common/image/title-application.png" /></h1>
         <p class="text-center">The content application sent successfully.</p>
         <div class="bg-submit">
-          <input type="button" value="送信" onclick="location.href='{{route('frontend.application.input')}}'" class="bt-submit" name="btnBackHome"/>
+          <input type="button" value="<< 応用" onclick="location.href='{{route('frontend.application.input')}}'" class="bt-submit" name="btnBackHome"/>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@
         <h1><img src="{{ asset('') }}public/frontend/common/image/title-contact.png" /></h1>
         <p class="text-center">The content inquiry has been sent successfully.</p>
         <div class="bg-submit">
-          <input type="button" value="送信" class="bt-submit" onclick="location.href='{{route('frontend.contact.input')}}'" name="btnBackHome"/>
+          <input type="button" value="<< 問い合わせ" class="bt-submit" onclick="location.href='{{route('frontend.contact.input')}}'" name="btnBackHome"/>
         </div>
       </div>
     </div>

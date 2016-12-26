@@ -37,11 +37,11 @@ return [
     | contact
     |--------------------------------------------------------------------------
     */
-    "error_name_kana_required"                                  => "ふりがなを入力してください。",
-    "error_name_kana_regex"                                     => "ふりがな不正な形式の",
+    "error_name_kana_required"                                  => "お名前（ひらがな）を入力してください。",
+    "error_name_kana_regex"                                     => "お名前（ひらがな）を入力してください。",
     "error_name_required"                                       => "お名前を入力してください。",
-    "error_company_name_required"                               => "株式会社チロロネットを入力してください。",
-    "error_department_name_required"                            => "株式会社チロロネットを入力してください。",
+    "error_company_name_required"                               => "御社名を入力してください。",
+    "error_department_name_required"                            => "部署名を入力してください。",
     "error_zipcode_required"                                    => "ご住所を入力してください。",
     "error_zipcode_regex"                                       => "正しい形式のご住所を入力してください。",
     "error_address_required"                                    => "住所を入力してください。",
