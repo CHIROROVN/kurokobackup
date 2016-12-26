@@ -83,7 +83,34 @@ class ApplicationController extends FrontendController
 
         $data                    = array();
         $data['dataInput']       = (Object) Session::get('app_data_session');
-        return view('frontend.application.confirm');
+        return view('frontend.application.confirm', $data);
+    }
+
+    /*
+    |-----------------------------------
+    | send mail application
+    |-----------------------------------
+    */
+    public function sendMail(){
+        if ( !Session::has('app_data_session') ) {
+            return redirect()->route('frontend.application.input');
+        }
+
+        $application       = Session::get('app_data_session');
+
+        // send manager
+        $mailManager = Mail::send(['html' => 'frontend.email.application.application_receive'], array('application' => $application), function($message) use ($application){
+            $message->from(MAIL_FROM_ADDRESS, MAIL_FROM_NAME);
+            $message->to(MAIL_TO_ADDRESS_MANAGER)->subject(SUBJECT_APPLICATION_MANAGER);
+        });
+
+        // send guest
+        $mailGuest = Mail::send(['html' => 'frontend.email.application.application_sent'], array('application' => $contact), function($message) use ($application){
+            $message->from(MAIL_FROM_ADDRESS, MAIL_FROM_NAME);
+            $message->to($contact['email'])->subject(SUBJECT_APPLICATION_USER);
+        });
+
+        return redirect()->route('frontend.application.complete');
     }
 
     /*

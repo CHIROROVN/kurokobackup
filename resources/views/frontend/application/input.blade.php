@@ -36,8 +36,8 @@
             <td class="title">追加容量</td>
             <td>
             <div class="row">
-              <div class="bg-select bg-select-sm-er" name="additional_capacity">
-                <select class="input-sm-er">
+              <div class="bg-select bg-select-sm-er">
+                <select class="input-sm-er" name="additional_capacity">
                   <option value="" @if(old('additional_capacity') == '') selected="" @endif>なし</option>
                   <option value="1TB" @if(old('additional_capacity') == '1TB') selected="" @endif>1TB</option>
                   <option value="2TB" @if(old('additional_capacity') == '2TB') selected="" @endif>2TB</option>
@@ -69,6 +69,7 @@
               <div class="row">
                 <div class="bg-select bg-select-year">
                   <select class="input-year strat_date" id="start_year" name="start_year">
+                    <option value="" @if(old('start_year') == '') selected="" @endif>----</option>
                     <option value="{{$yearCurr}}" @if(old('start_year') == $yearCurr) selected="" @endif>{{$yearCurr}}</option>
                     <option value="{{$yearNext}}" @if(old('start_year') == $yearNext) selected="" @endif>{{$yearNext}}</option>
                     <option value="{{$yearLast}}" @if(old('start_year') == $yearLast) selected="" @endif>{{$yearLast}}</option>
@@ -77,34 +78,35 @@
                 <span class="text-date">年</span>
                 <div class="bg-select bg-select-date">
                   <select class="input-date strat_date" id="start_month" name="start_month">
-                    <option value="1" @if(old('start_month') == 1) selected="" @endif>1</option>
-                    <option value="2" @if(old('start_month') == 2) selected="" @endif>2</option>
-                    <option value="3" @if(old('start_month') == 3) selected="" @endif>3</option>
-                    <option value="4" @if(old('start_month') == 4) selected="" @endif>4</option>
-                    <option value="5" @if(old('start_month') == 5) selected="" @endif>5</option>
-                    <option value="6" @if(old('start_month') == 6) selected="" @endif>6</option>
-                    <option value="7" @if(old('start_month') == 7) selected="" @endif>7</option>
-                    <option value="8" @if(old('start_month') == 8) selected="" @endif>8</option>
-                    <option value="9" @if(old('start_month') == 9) selected="" @endif>9</option>
-                    <option value="10" @if(old('start_month') == 10) selected="" @endif>10</option>
-                    <option value="11" @if(old('start_month') == 11) selected="" @endif>11</option>
-                    <option value="12" @if(old('start_month') == 12) selected="" @endif>12</option>
+                    <option value="" @if(old('start_month') == '') selected="" @endif>--</option>
+                    <option value="01" @if(old('start_month') == '01') selected="" @endif>01</option>
+                    <option value="02" @if(old('start_month') == '02') selected="" @endif>02</option>
+                    <option value="03" @if(old('start_month') == '03') selected="" @endif>03</option>
+                    <option value="04" @if(old('start_month') == '04') selected="" @endif>04</option>
+                    <option value="05" @if(old('start_month') == '05') selected="" @endif>05</option>
+                    <option value="06" @if(old('start_month') == '06') selected="" @endif>06</option>
+                    <option value="07" @if(old('start_month') == '07') selected="" @endif>07</option>
+                    <option value="08" @if(old('start_month') == '08') selected="" @endif>08</option>
+                    <option value="09" @if(old('start_month') == '09') selected="" @endif>09</option>
+                    <option value="10" @if(old('start_month') == '10') selected="" @endif>10</option>
+                    <option value="11" @if(old('start_month') == '11') selected="" @endif>11</option>
+                    <option value="12" @if(old('start_month') == '12') selected="" @endif>12</option>
                   </select>
                 </div>
                 <span class="text-date">月</span>
                 <div class="bg-select bg-select-date">
                   <select class="input-date strat_date" id="start_day" name="start_day">
-                    <option value="1">1</option>
-                    <option value="1">1</option>
-                    <option value="1">1</option>
-                    <option value="1">1</option>
+                    <option value="" @if(old('start_day') == '') selected="" @endif>--</option>
                   </select>
                 </div>
                 <span class="text-date">日</span>
               </div>
-              @if ($errors->first('start_year'))<span class="error-input">{!! $errors->first('start_year') !!}</span>@endif
-              @if ($errors->first('start_month'))<span class="error-input">{!! $errors->first('start_month') !!}</span>@endif
-              @if ($errors->first('start_day'))<span class="error-input">{!! $errors->first('start_day') !!}</span>@endif
+              <div class="row"> 
+              <br />
+              </div>
+              @if ($errors->first('start_year'))<br /><span class="error-input">{!! $errors->first('start_year') !!}</span>@endif
+              @if ($errors->first('start_month')) <br /><span class="error-input">{!! $errors->first('start_month') !!}</span> <br />@endif
+              @if ($errors->first('start_day'))@if(empty($errors->first('start_month'))) <br /> @endif<span class="error-input">{!! $errors->first('start_day') !!}</span>@endif
             </td>
           </tr>
           <tr>
@@ -222,7 +224,7 @@
               <div class="checkbox">
                 弊社ホームページのプライバシーポリシーをご確認いただいた上、
 ご同意いただき送信をお願いいたします。<br />
-                <input id="policy_check" type="checkbox" name="policy_check" @if(old('policy_check')) checked="" @endif">
+                <input id="policy_check" type="checkbox" value="同意する" name="policy_check" @if(old('policy_check')) checked="" @endif">
                 <label for="policy_check" ></label> 同意する
               </div>
               @if ($errors->first('policy_check'))<span class="error-input">{!! $errors->first('policy_check') !!}</span>@endif
@@ -241,6 +243,25 @@
 
 <script  type="text/javascript">
 $(document).ready(function(){
+      var date = new Date();
+      var year = date.getFullYear();
+      var month    = date.getMonth()+1;
+      var day = format2Digit(date.getDate());
+      var totaldays = new Date(year,month,1,-1).getDate();
+
+      var opthtml = "<option value=''>--</option>";
+
+      var oldDay = "{{old('start_day')}}";
+      for(var i=1; i<=totaldays; i++){
+        opthtml += '<option value="' + format2Digit(i) + '">'+ format2Digit(i) +'</option>';
+      }
+      $('#start_day').html(opthtml);
+      $('#start_day').find('option').each(function(){
+        if($(this).val()==oldDay){
+            $('#start_day option[value="'+oldDay+'"]').prop('selected',true);
+        }
+      });
+
     if($('#none_date').is(':checked')){
        $('.strat_date').attr('disabled', true);
     }else{
@@ -249,10 +270,50 @@ $(document).ready(function(){
 
     $('#none_date').click(function(event) {
       $('.strat_date').attr('disabled', true);
+
+      $('#start_year option[value=""]').prop('selected',true);
+      $('#start_month option[value=""]').prop('selected',true);
+      $('#start_day option[value=""]').prop('selected',true);
     });
 
     $('#yes_date').click(function(event) {
       $('.strat_date').attr('disabled', false);
+
+      var date = new Date();
+      var year = date.getFullYear();
+      var month    = date.getMonth()+1;
+      var day = format2Digit(date.getDate());
+      var totaldays = new Date(year,month,1,-1).getDate();
+
+      var opthtml = "<option value=''>--</option>";
+      for(var i=1; i<=totaldays; i++){
+        opthtml += '<option value="' + format2Digit(i) + '">'+ format2Digit(i) +'</option>';
+      }
+      $('#start_day').html(opthtml);
+      $('#start_day').find('option').each(function(){
+        if($(this).val()==oldDay){
+            $('#start_day option[value="'+oldDay+'"]').prop('selected',true);
+        }
+      });
+
+      if(year == ''){
+        $('#start_year option[value=""]').prop('selected',true);
+      }else{
+        $('#start_year option[value="'+year+'"]').prop('selected',true);
+      }
+
+      if(month == ''){
+        $('#start_month option[value=""]').prop('selected',true);
+      }else{
+        $('#start_month option[value="'+month+'"]').prop('selected',true);
+      }
+
+      if(day == ''){
+        $('#start_day option[value=""]').prop('selected',true);
+      }else{
+        $('#start_day option[value="'+day+'"]').prop('selected',true);
+      }
+
     });
 
     // if($('#policy_check').is(':checked')){
@@ -269,6 +330,47 @@ $(document).ready(function(){
 //       $('#btnSubmit').attr('disabled', true);
 //     }
 // });
+
+</script>
+
+  <script type="text/javascript">
+    var date = new Date();
+    var month    = date.getMonth()+1;
+    var day = format2Digit(date.getDate());
+
+    $("#start_year").change(function(event) {
+      if($(this).val() == ''){
+        $('#start_month option[value=""]').prop('selected',true);
+        $('#start_day option[value=""]').prop('selected',true);
+      }else{
+        $('#start_month option[value="'+month+'"]').prop('selected',true);
+        $('#start_day option[value="'+day+'"]').prop('selected',true);
+      }
+    });
+
+    $("#start_month").change(function(event) {
+      var cyear = $('#start_year').val();
+      var cmonth = $(this).val();
+      var totaldays = new Date(cyear,cmonth,1,-1).getDate();
+
+      var opthtml = "<option value=''>--</option>";
+      for(var i=1; i<=totaldays; i++){
+        opthtml += '<option value="' + format2Digit(i) + '">'+ format2Digit(i) +'</option>';
+      }
+      $('#start_day').html(opthtml);
+
+      if(cmonth == ''){
+        $('#start_day option[value=""]').prop('selected',true);
+      }else{
+        $('#start_day option[value="'+day+'"]').prop('selected',true);
+      }
+    });
+
+  function format2Digit(num)
+  {
+    if(num < 10) { return '0'+num }
+    else return num;
+  }
 
 </script>
 @endsection

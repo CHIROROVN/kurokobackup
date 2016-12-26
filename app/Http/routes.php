@@ -48,5 +48,13 @@ Route::group(['prefix' => '', 'namespace' => 'Frontend'], function () {
     */
     Route::get('/function', ['as' => 'frontend.function.index', 'uses' => 'FunctionController@index']);
 
+    /*
+    |--------------------------------------------------------------------------
+    | Question Routes
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/question', ['as' => 'frontend.question.index', 'uses' => 'QuestionController@index']);
+
+
 
 });

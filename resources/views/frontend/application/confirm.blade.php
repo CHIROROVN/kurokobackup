@@ -13,84 +13,92 @@
           <tr>
             <td class="title">ご契約容量</td>
             <td>
-              200GB
+              {{$dataInput->contract_capacity}}
             </td>
           </tr>
           <tr>
             <td class="title">追加容量</td>
             <td>
+            @if(!empty($dataInput->additional_capacity))
+            {{$dataInput->additional_capacity}}
+            @else
               なし
+            @endif
             </td>
           </tr>
           <tr>
             <td class="title">サービス<br />開始希望日</td>
             <td>
-              希望なし<br />
-              12年25月2016
-              </div>
+              @if($dataInput->select_date == 2)
+                @if(!empty($dataInput->start_year))
+                {{$dataInput->start_year}}年{{$dataInput->start_month}}月{{$dataInput->start_day}}日
+                @endif
+              @else
+              希望なし
+              @endif
             </td>
           </tr>
           <tr>
             <td class="title">お支払い方法</td>
             <td>
-              月払い<br />
-              請求書払い（振込手数料はお客様負担）
+              {{$dataInput->payment_method}}<br />
+              {{$dataInput->payment_credit}}
             </td>
           </tr>
           <tr>
             <td class="title">ご契約者名</td>
             <td>
-              ふりがな <br />
-              お名前
+              {{$dataInput->contract_furigana}} <br />
+              {{$dataInput->contract_name}}
             </td>
           </tr>
           <tr>
             <td class="title">組織名</td>
             <td>
-              株式会社チロロネット
+              {{$dataInput->organization_name}}
             </td>
           </tr>
           <tr>
             <td class="title">部署名</td>
             <td>
-              NS部
+              {{$dataInput->dept_name}}
             </td>
           </tr>
           <tr>
             <td class="title">役職名</td>
             <td>
-              部長
+              {{$dataInput->title}}
             </td>
           </tr>
           <tr>
             <td class="title">ご住所</td>
             <td>
-              〒710-0844<br />
-              岡山県倉敷市福井125-7
+              〒{{$dataInput->zipcode}}<br />
+              {{$dataInput->address}}
             </td>
           </tr>
           <tr>
             <td class="title">連絡先TEL</td>
             <td>
-              086-430-3956
+              {{$dataInput->tel}}
             </td>
           </tr>
           <tr>
             <td class="title">連絡先FAX</td>
             <td>
-              086-423-3957
+              {{$dataInput->fax}}
             </td>
           </tr>
           <tr>
             <td class="title">メールアドレス</td>
             <td>
-              support@chiroro.com
+              {{$dataInput->email}}
             </td>
           </tr>
           <tr>
             <td class="title">備考</td>
             <td>
-              備考
+              {{$dataInput->remark}}
             </td>
           </tr>
           <tr>
@@ -101,8 +109,8 @@
           </tr>
         </table>
         <div class="bg-submit">
-          <input type="submit" value="送信" class="bt-submit" name=""/>
-          <input type="submit" value="送信2" class="bt-submit" name=""/>
+          <input type="button" value="送信" class="bt-submit" name="btnSend" onclick="location.href='javascript:history.back()'"/>
+          <input type="button" value="戻る" class="bt-submit" onclick="location.href='javascript:history.back()'" name="btnBack"/>
         </div>
       </div>
     </div>
